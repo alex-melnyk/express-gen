@@ -3,6 +3,10 @@ extends layout
 block content
     .container
         .row
+            .col-md-6
+                for post in posts
+                    img.img-rounded(style="height: 100px;", src=`/uploads/${post.photo}`)
+        .row
             .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
                 form(action='/upload/', method='post', enctype='multipart/form-data')
                     .form-group

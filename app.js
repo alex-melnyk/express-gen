@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/posters', {useMongoClient: true});
+
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var upload = require('./routes/upload');
